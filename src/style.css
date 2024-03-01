@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1;
+}
+
+html, body {
+  background-color: #000;
+}
+
+.s-gpu {
+  will-change: transform;
+}
+
+.l-main {
+  font-family: 'Anton';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 18vw;
+  /* pointer-events: none; */
+  /* letter-spacing: -0.1em; */
+  /* backdrop-filter: blur(20px); */
+  /* mix-blend-mode: difference; */
+}
+
+.l-main p {
+  /* text-shadow: #FFF 0 0 10px; */
+  /* border-bottom: 20px solid #FFF; */
+}
+
+@media screen and (max-width:768px) {
+  .l-main {
+    font-size: 24vw;
+  }
+}
+
+.l-main p::selection {
+  background-color: #FFF;
+  color: #000;
+}
+
+.js-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* backdrop-filter: blur(5px); */
+  /* mix-blend-mode: darken; */
+  pointer-events: none;
+}
+
+
+.l-matter {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.l-matter.-hide {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
+.l-debug {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #FFF;
+  font-size: 12px;
+  display: none;
+}
+
+
+
+
+
+
+
+.l-info {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 9999;
+}
+.l-info p {
+  font-size: 14px;
+  color: inherit;
+  background-color: #000;
+  padding: 5px 20px 5px 20px;
+}
+.l-info a {
+  color: inherit;
+  text-decoration: line-through;
+}
+.l-info a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+  .l-info {
+    justify-content: flex-start;
+    margin-top: 20px;
+    height: auto;
+  }
+  .l-info p {
+    font-size: 10px;
+  }
+}
